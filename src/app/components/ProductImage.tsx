@@ -15,9 +15,11 @@ export default function ProductImage({product, fill}: ProductImageProps) {
         <Image 
             src={product.image} 
             fill 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={false}
             alt={product.name} 
             className={`object-cover ${loading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0' }`}
-            onLoadingComplete={() => setLoading(false)}
+            onLoad={() => setLoading(false)}
         />
     ) : (
         <Image 
@@ -26,7 +28,7 @@ export default function ProductImage({product, fill}: ProductImageProps) {
             height={400}
             alt={product.name} 
             className={`object-cover ${loading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0' }`}
-            onLoadingComplete={() => setLoading(false)}
+            onLoad={() => setLoading(false)}
         />
     )
 }
