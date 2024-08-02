@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "prisma generate && next dev",
+    "build": "prisma generate && prisma db push && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@clerk/localizations": "^2.5.3",
     "@clerk/nextjs": "^5.2.11",
+    "@prisma/client": "^5.17.0",
     "clsx": "^2.1.1",
+    "eccomerce": "file:",
     "next": "14.2.5",
     "prisma": "^5.17.0",
     "react": "^18",

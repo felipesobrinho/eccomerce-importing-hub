@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
 import clsx from "clsx";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ptBR } from '@clerk/localizations'
+import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
