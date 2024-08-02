@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <ClerkProvider localization={ptBR}>
       <html lang="en">
-        <body className={clsx(inter.className, 'bg-gray-300')}>
+        <body className={clsx(inter.className, 'bg-slate-800')}>
             <Navbar />
             <main className="h-full p-16">
               {children}
