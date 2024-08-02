@@ -9,17 +9,17 @@ type ProductProps = {
 
 }
 
-export default async function Product({product} : ProductProps ) {
+export default async function Product({ product }: ProductProps) {
     return (
-        <Link href={`/product/${product.id}`}>
-            <div className="flex flex-col shadow-lg h-96 p-5 bg-zinc-800 rounded-xl">
-                <div className="relative max-h-72 flex-1"> <ProductImage product={product} fill /> </div>
-                <div className="flex justify-between font-bold my-3"> 
-                    <p className="w-40 text-white truncate"> {product.name} </p> 
-                    <p className="text-md text-teal-600"> {formatPrice(product.price)} </p> 
-                </div>
-                <AddCart product={product}/>
-            </div>
-        </Link>
+        <div className="flex flex-col shadow-lg h-96 p-5 bg-zinc-800 rounded-xl">
+                <div className="relative max-h-72 flex-1"> <Link href={`/product/${product.id}`}> <ProductImage product={product} fill /> </Link> </div>
+                <Link href={`/product/${product.id}`}>
+                    <div className="flex justify-between font-bold my-3">
+                        <p className="w-40 text-white truncate"> {product.name} </p>
+                        <p className="text-md text-teal-600"> {formatPrice(product.price)} </p>
+                    </div>
+                </Link>
+            <AddCart product={product} />
+        </div>
     );
 }
