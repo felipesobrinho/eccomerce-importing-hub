@@ -82,8 +82,6 @@ async function handler(request: Request) {
             },
         });
     }
-
-    
 }
 
 export const GET = handler;
