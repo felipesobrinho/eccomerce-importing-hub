@@ -28,7 +28,7 @@ async function handler(request: NextRequest) {
             case 'charge.succeeded':
                 const charge = event.data.object as Stripe.Charge;
                 if (typeof charge.payment_intent === 'string') {
-                    await prisma.order.update({
+                    const order = await prisma.order.update({
                         where: { paymentIntentID: charge.payment_intent },
                         data: { status: 'complete' },
                     });
