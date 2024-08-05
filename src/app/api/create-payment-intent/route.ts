@@ -1,6 +1,6 @@
 import { stripe } from "@/lib/stripe";
 import { ProductType } from "@/types/ProductType";
-import { auth } from "@clerk/nextjs/server";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import prisma from '@/lib/prisma';
 import { NextResponse } from "next/server";
 
@@ -19,11 +19,18 @@ export async function POST(req: Request) {
         return new NextResponse("Unauthorized", {status: 401});
     } 
 
-    const customerIdTemp = 'cus_Qb2O52aUst89hE';
+    const currentUser = await prisma.user.findUnique({
+        where: {externalId: userId}
+    })
+
+    if (!currentUser) {
+        return new Response("User not found", {status: 404});
+    }
 
     const total = calculateOrderAmount(items);
+
     const orderData = {
-        user: {connect: { id: 1 } },
+        user: {connect: { id: currentUser.id } },
         amount: total,
         currency: 'brl',
         status: 'pending',

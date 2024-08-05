@@ -25,6 +25,7 @@ import {
 } from "./ui/alert-dialog";
 import CheckoutButton from "./CheckoutButton";
 import Checkout from "./Checkout";
+import OrderCompleted from "./OrderCompleted";
 
 export default function CartDrawer() {
  const useStore = useCartStore();
@@ -113,6 +114,7 @@ export default function CartDrawer() {
        <CheckoutButton totalPrice={totalPrice} />
       )}
       {useStore.onCheckout === "checkout" && <Checkout />}
+      {useStore.onCheckout === "sucess" && <OrderCompleted />}
      </DrawerFooter>
     </div>
    </DrawerContent>
