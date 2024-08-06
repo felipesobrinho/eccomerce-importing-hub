@@ -1,5 +1,5 @@
 import { ArrowLeft, MinusCircle, PlusCircle, ShoppingCart } from "lucide-react";
-import { useCartStore } from "@/store";
+import { useCartStore } from "@/hooks/use-store";
 import {
  Drawer,
  DrawerTrigger,

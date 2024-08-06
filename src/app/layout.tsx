@@ -4,8 +4,8 @@ import "./globals.css";
 import clsx from "clsx";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ptBR } from '@clerk/localizations'
-import Navbar from "./components/Navbar";
-
+import Layout from "./components/Layout";
+import { ThemeProvider } from "@/providers/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,14 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider localization={ptBR}>
-      <html lang="en">
-        <body className={clsx(inter.className, 'bg-slate-800')}>
-            <Navbar />
-            <main className="h-full p-16">
-              {children}
-            </main>
-        </body>
-      </html>
+        <html lang="en">
+          <body className={clsx(inter.className)}>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <Layout> {children} </Layout>
+            </ThemeProvider>
+          </body>
+        </html>
     </ClerkProvider>
   );
 }

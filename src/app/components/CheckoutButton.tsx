@@ -1,6 +1,6 @@
 'use client'
 import { formatPrice } from "@/lib/utils";
-import { useCartStore } from "@/store";
+import { useCartStore } from "@/hooks/use-store";
 import { Button } from "./ui/button";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
@@ -27,7 +27,7 @@ export default function CheckoutButton({ totalPrice }: CheckoutButtonProps) {
     <p className="text-teal-600 font-bold"> Total: {formatPrice(totalPrice)}</p>
     <Button
         onClick={handleCheckout}
-        className="rounded-md w-full text-white bg-teal-600 py-2 mt-2"
+        className="rounded-md w-full bg-teal-600 py-2 mt-2"
     >
         Finalizar Compra
     </Button>

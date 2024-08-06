@@ -1,5 +1,5 @@
 'use client'
-import { useCartStore } from "@/store"
+import { useCartStore } from "@/hooks/use-store"
 import { ProductType } from "@/types/ProductType"
 import { Button } from "./ui/button";
 
@@ -9,7 +9,7 @@ export default function AddCart({product}: {product: ProductType}) {
     return (
         <Button 
             onClick={() => addProduct(product)}
-            className="rounded-md bg-teal-600 text-white px-3.5 py-2.5 text-sm text-center"
+            className="rounded-md bg-teal-600 px-3.5 py-2.5 text-sm text-center"
         > 
             Adicionar ao Carrinho 
         </Button>

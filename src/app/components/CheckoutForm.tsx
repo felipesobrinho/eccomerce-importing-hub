@@ -1,5 +1,5 @@
 import { formatPrice } from "@/lib/utils";
-import { useCartStore } from "@/store";
+import { useCartStore } from "@/hooks/use-store";
 import { PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js"
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";

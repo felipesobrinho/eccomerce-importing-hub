@@ -1,5 +1,5 @@
 'use client'
-import { useCartStore } from "@/store";
+import { useCartStore } from "@/hooks/use-store";
 import CartDrawer from "./CartDrawer";
 
 export default function Cart() {

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 
-import { useCartStore } from "@/store"
+import { useCartStore } from "@/hooks/use-store"
 import { useEffect } from "react"
 import { Button } from "./ui/button";
 

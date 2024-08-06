@@ -1,7 +1,6 @@
 'use client'
 import { ProductType } from "@/types/ProductType";
 import Image from "next/image";
-import { useState } from "react";
 
 type ProductImageProps = {
     product: ProductType;
@@ -9,7 +8,6 @@ type ProductImageProps = {
 }
 
 export default function ProductImage({product, fill}: ProductImageProps) {
-    const [loading, setLoading] = useState(true);
 
     return fill ? (
         <Image 
@@ -18,8 +16,7 @@ export default function ProductImage({product, fill}: ProductImageProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={false}
             alt={product.name} 
-            className={`object-cover ${loading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0' }`}
-            onLoad={() => setLoading(false)}
+            className={`object-contain grayscale-0' }`}
         />
     ) : (
         <Image 
@@ -27,8 +24,7 @@ export default function ProductImage({product, fill}: ProductImageProps) {
             width={400}
             height={400}
             alt={product.name} 
-            className={`object-cover ${loading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0' }`}
-            onLoad={() => setLoading(false)}
+            className={`object-contain grayscale-0' }`}
         />
     )
 }

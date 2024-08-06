@@ -1,16 +1,28 @@
-import Product from "./components/Product";
-import fetchProducts from "./actions";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/app/components/ui/breadcrumb"
+import { ContentLayout } from "./components/ContentLayout";
 
 export default async function Home() {
-  const products = await fetchProducts();
-  
   return (
-   <div className="max-w-7xl h-full mx-auto pt-8 px-8 xl:px-0">
-      <div className="grid grid-cols-responsive gap-10 xl:gap-6">
-        {products.map((product) => (
-          <Product key={product.id} product={product}/>
-        ))}
-      </div>
-   </div>
+    <ContentLayout title="Home">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">General</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Home</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+        <div></div>
+    </ContentLayout>
   );
 }
