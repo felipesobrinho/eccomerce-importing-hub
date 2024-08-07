@@ -5,7 +5,7 @@ O Importing Center é o projeto de um hub para auxiliar novos usuários na impor
 
 ## Stack utilizada
 
-**Front-end:** Next.js, TailwindCSS, Shadcn/ui, Zustand, Lucide.
+**Front-end:** Next.js, TypeScript, TailwindCSS, Shadcn/ui, Zustand, Lucide.
 
 **Back-end:** Clerk, Stripe, Prisma.
 
