@@ -9,7 +9,7 @@ export default function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { isOpen } = useSidebarToggle(); // Corrigido: Use diretamente o hook
+  const { isOpen } = useSidebarToggle();
 
   return (
     <>

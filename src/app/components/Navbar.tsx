@@ -13,7 +13,7 @@ import { ModeToggle } from "./ModeToggle";
 
 function Navbar({title}: {title: string}) {
   return (
-    <nav className="flex items-center justify-center py-4 bg-background/95 shadow backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary">
+    <nav className="flex w-full items-center justify-center py-4 bg-background/95 shadow backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary">
       <div className="w-full flex items-center justify-between mx-10">
         <div>
           <p>{title}</p>

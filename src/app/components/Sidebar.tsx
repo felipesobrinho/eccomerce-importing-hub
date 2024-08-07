@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PanelsTopLeft } from "lucide-react";
+import { Container } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/app/components/ui/button";
@@ -28,7 +28,7 @@ export function Sidebar() {
           asChild
         >
           <Link href="/" className="flex items-center gap-2">
-            <PanelsTopLeft className="w-6 h-6 mr-1" />
+            <Container className="w-6 h-6 mr-1" />
             <h1
               className={cn(
                 "font-bold text-lg whitespace-nowrap transition-[transform,opacity,display] ease-in-out duration-300",

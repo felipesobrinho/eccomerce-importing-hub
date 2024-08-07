@@ -16,7 +16,7 @@ export default function ProductImage({product, fill}: ProductImageProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={false}
             alt={product.name} 
-            className={`object-contain grayscale-0' }`}
+            className={`object-cover grayscale-0' }`}
         />
     ) : (
         <Image 
@@ -24,7 +24,7 @@ export default function ProductImage({product, fill}: ProductImageProps) {
             width={400}
             height={400}
             alt={product.name} 
-            className={`object-contain grayscale-0' }`}
+            className={`object-cover grayscale-0' }`}
         />
     )
 }

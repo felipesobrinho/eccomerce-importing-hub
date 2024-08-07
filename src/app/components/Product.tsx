@@ -11,8 +11,10 @@ type ProductProps = {
 
 export default async function Product({ product }: ProductProps) {
     return (
-        <div className="flex flex-col shadow-lg h-96 p-5 rounded-xl">
-                <div className="relative max-h-72 flex-1"> <Link href={`/product/${product.id}`}> <ProductImage product={product} fill /> </Link> </div>
+        <div className="flex flex-col shadow-2xl h-96 p-5 rounded-xl dark:bg-zinc-800">
+                <div className="relative max-h-72 flex-1"> <Link href={`/product/${product.id}`}> 
+                    <ProductImage product={product} fill /> </Link> 
+                </div>
                 <Link href={`/product/${product.id}`}>
                     <div className="flex justify-between font-bold my-3">
                         <p className="w-40 truncate"> {product.name} </p>

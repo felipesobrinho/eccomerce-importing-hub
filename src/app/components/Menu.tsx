@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { Ellipsis, LogOut } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -13,7 +12,6 @@ import {
   TooltipContent,
   TooltipProvider,
 } from "@/app/components/ui/tooltip";
-import { CollapseMenuButton } from "./CollapseMenuButton";
 
 interface MenuProps {
   isOpen: boolean | undefined;
