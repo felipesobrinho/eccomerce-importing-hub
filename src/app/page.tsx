@@ -16,7 +16,7 @@ export default async function Home() {
   const homeCardList = getHomeCardList();
 
   return (
-    <ContentLayout title="Home">
+    <ContentLayout title="Home" goBack={false}>
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
