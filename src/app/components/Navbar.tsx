@@ -43,7 +43,7 @@ function Navbar({ title, goBack }: { title: string, goBack: boolean }) {
             </DrawerContent>
           </Drawer>
           {goBack && <ArrowLeft onClick={() => router.back()} />}
-          <p className="sm:text-lg max-w-[200px] text-sm text-nowrap truncate">{title}</p>
+          <p className="sm:text-lg max-w-[200px] sm:max-w-[500px] text-sm text-nowrap truncate">{title}</p>
         </div>
         <div className="flex items-center justify-center gap-7">
           <ModeToggle />
