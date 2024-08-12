@@ -6,6 +6,7 @@ import { Button } from "@/app/components/ui/button";
 import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
 import { SidebarToggle } from "./SidebarToggle";
 import { Menu } from "./Menu";
+import Image from "next/image";
 
 export function Sidebar() {
   const { isOpen, setIsOpen } = useSidebarToggle();
@@ -28,7 +29,7 @@ export function Sidebar() {
           asChild
         >
           <Link href="/" className="flex items-center gap-2">
-            <Container className="w-6 h-6 mr-1" />
+            <Image src="/icon.png" width={48} height={48} color="white" alt="Logo" />
             <h1
               className={cn(
                 "font-bold text-lg whitespace-nowrap transition-[transform,opacity,display] ease-in-out duration-300",

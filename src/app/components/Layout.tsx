@@ -16,7 +16,7 @@ export default function MainLayout({
       <Sidebar />
       <main
         className={cn(
-          "h-screen bg-zinc-50 dark:bg-zinc-900 transition-[margin-left] ease-in-out duration-300",
+          "h-screen transition-[margin-left] ease-in-out duration-300",
           !isOpen ? "lg:ml-[90px]" : "lg:ml-72" 
         )}
       >
