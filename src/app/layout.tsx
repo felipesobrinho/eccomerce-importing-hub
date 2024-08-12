@@ -9,8 +9,11 @@ import { ThemeProvider } from "@/providers/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Importing Center",
+  title: "Importing Hub",
   description: "A importing center for help you import",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
