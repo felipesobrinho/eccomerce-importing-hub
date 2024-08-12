@@ -1,7 +1,8 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import Cart from "./Cart";
-import { AlignJustify, CircleUser, UserPlus, X } from "lucide-react";
+import { AlignJustify, ArrowLeft, CircleUser, UserPlus, X } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,13 +25,15 @@ import { LogIn } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 import { Menu } from "./Menu";
 
-function Navbar({ title }: { title: string }) {
+function Navbar({ title, goBack }: { title: string, goBack: boolean }) {
+  const router = useRouter();
+
   return (
-    <nav className="flex w-full items-center justify-center py-4 bg-background/95 shadow backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary sm:w-screen sm:m-0 p-0">
+    <nav className="flex w-screen items-center justify-center py-4 bg-background/95 shadow backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary sm:w-full">
       <div className="w-full flex items-center justify-between mx-10">
         <div className="flex gap-4">
-          <Drawer direction="left">
-            <DrawerTrigger> <AlignJustify  className="sm:hidden"/></DrawerTrigger>
+          <Drawer>
+            <DrawerTrigger> <AlignJustify className="sm:hidden"/></DrawerTrigger>
             <DrawerContent >
               <DrawerHeader>
                 <DrawerTitle> Menu </DrawerTitle>
@@ -39,7 +42,8 @@ function Navbar({ title }: { title: string }) {
               <Menu isOpen={true}/>
             </DrawerContent>
           </Drawer>
-          <p>{title}</p>
+          {goBack && <ArrowLeft onClick={() => router.back()} />}
+          <p className="sm:text-lg max-w-[200px] text-sm text-nowrap truncate">{title}</p>
         </div>
         <div className="flex items-center justify-center gap-7">
           <ModeToggle />

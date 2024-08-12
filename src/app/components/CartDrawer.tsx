@@ -39,7 +39,7 @@ export default function CartDrawer() {
    <DrawerTrigger>
     <ShoppingCart />
    </DrawerTrigger>
-   <DrawerContent className="h-screen top-0 right-0 left-auto mt-0 w-[500px] rounded-none">
+   <DrawerContent className="h-screen top-0 right-0 left-auto mt-0 w-96 rounded-none sm:w-[500px]">
     <div className="mx-auto w-full p-5">
      <DrawerHeader>
       {/* <DrawerClose className="flex items-center gap-3 pb-6"> 
