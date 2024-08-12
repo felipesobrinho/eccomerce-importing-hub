@@ -14,7 +14,7 @@ export default async function Loja() {
   const products = await fetchProducts();
   
   return (
-    <ContentLayout title="Home">
+    <ContentLayout title="Home" goBack={true}>
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
