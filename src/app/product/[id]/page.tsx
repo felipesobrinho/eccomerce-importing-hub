@@ -1,6 +1,6 @@
-import AddCart from "@/app/components/AddCart";
-import { ContentLayout } from "@/app/components/ContentLayout";
-import ProductImage from "@/app/components/ProductImage";
+import AddCart from "@/app/components/add-cart";
+import { ContentLayout } from "@/app/components/content-layout";
+import ProductImage from "@/app/components/product-image";
 import { formatPrice } from "@/lib/utils";
 import Stripe from "stripe";
 
@@ -23,6 +23,7 @@ async function getProductDetails(id: string) {
         id: product.id,
         price: price.data[0].unit_amount,
         name: product.name,
+        category: product.metadata['category'],
         image: product.images[0],
         description: product.description,
         currency: price.data[0].currency
@@ -42,6 +43,7 @@ export default async function ProductPage({params: {id} }: ProductPageProps) {
                         <h2 className="text-xl"> {formatPrice(product.price)}</h2>
                     </div>
                     <div className="pb-4">
+                        <p className="text-sm "> {product.category} </p>
                         <p className="text-sm "> {product.description} </p>
                     </div>
                     <AddCart product={product}/>
