@@ -1,4 +1,4 @@
-import Product from "./Product";
+import Product from "./product";
 import { ProductType } from "@/types/ProductType";
 
 type ProductListProps = {

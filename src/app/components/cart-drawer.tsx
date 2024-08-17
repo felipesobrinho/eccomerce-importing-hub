@@ -23,9 +23,10 @@ import {
  AlertDialogTitle,
  AlertDialogTrigger,
 } from "./ui/alert-dialog";
-import CheckoutButton from "./CheckoutButton";
-import Checkout from "./Checkout";
-import OrderCompleted from "./OrderCompleted";
+import CheckoutButton from "./checkout-button";
+
+import OrderCompleted from "./order-completed";
+import Checkout from "./checkout";
 
 export default function CartDrawer() {
  const useStore = useCartStore();

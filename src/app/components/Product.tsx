@@ -1,7 +1,7 @@
 import { ProductType } from "@/types/ProductType"
-import ProductImage from "./ProductImage";
+import ProductImage from "./product-image";
 import { formatPrice } from "@/lib/utils";
-import AddCart from "./AddCart";
+import AddCart from "./add-cart";
 import Link from "next/link";
 
 type ProductProps = {

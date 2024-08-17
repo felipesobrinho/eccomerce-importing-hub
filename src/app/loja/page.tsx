@@ -6,10 +6,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/app/components/ui/breadcrumb"
-import { ContentLayout } from "../components/ContentLayout";
-import ProductsList from "../components/ProductsList";
+import { ContentLayout } from "../components/content-layout";
+import ProductsList from "../components/products-list";
 import fetchProducts from "../actions";
-import SearchInput from "../components/SearchInput";
+import SearchInput from "../components/search-input";
 
 export default async function Loja({
   searchParams,

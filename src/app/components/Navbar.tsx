@@ -1,7 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation'
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-import Cart from "./Cart";
+import Cart from "./cart";
 import { AlignJustify, ArrowLeft, CircleUser, UserPlus, X } from "lucide-react";
 import {
   DropdownMenu,
@@ -22,8 +22,8 @@ import {
 } from "@/app/components/ui/drawer";
 
 import { LogIn } from "lucide-react";
-import { ModeToggle } from "./ModeToggle";
-import { Menu } from "./Menu";
+import { ModeToggle } from "./mode-toggle";
+import { Menu } from "./menu";
 
 function Navbar({ title, goBack }: { title: string, goBack: boolean }) {
   const router = useRouter();

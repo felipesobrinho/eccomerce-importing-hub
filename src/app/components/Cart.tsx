@@ -1,6 +1,6 @@
 'use client'
 import { useCartStore } from "@/hooks/use-store";
-import CartDrawer from "./CartDrawer";
+import CartDrawer from "./cart-drawer";
 
 export default function Cart() {
     const useStore = useCartStore();

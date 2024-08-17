@@ -4,8 +4,8 @@ import { Container } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/app/components/ui/button";
 import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
-import { SidebarToggle } from "./SidebarToggle";
-import { Menu } from "./Menu";
+import { SidebarToggle } from "./sidebar-toggle";
+import { Menu } from "./menu";
 import Image from "next/image";
 
 export function Sidebar() {

@@ -7,9 +7,9 @@ import {
   BreadcrumbSeparator,
 } from "@/app/components/ui/breadcrumb"
 
-import { ContentLayout } from "./components/ContentLayout";
+import { ContentLayout } from "./components/content-layout";
 import Image from "next/image";
-import HomeCard from "./components/HomeCard";
+import HomeCard from "./components/home-card";
 import { getHomeCardList } from "@/lib/home-card-list";
 
 export default async function Home() {
