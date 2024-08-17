@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
 import { Sidebar } from "./sidebar";
 
-export default function MainLayout({
+export default function Layout({
   children
 }: {
   children: React.ReactNode;

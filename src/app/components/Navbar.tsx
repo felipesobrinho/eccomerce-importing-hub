@@ -16,16 +16,14 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
-  DrawerDescription,
   DrawerClose,
-  DrawerFooter,
 } from "@/app/components/ui/drawer";
 
 import { LogIn } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { Menu } from "./menu";
 
-function Navbar({ title, goBack }: { title: string, goBack: boolean }) {
+export default function Navbar({ title, goBack }: { title: string, goBack: boolean }) {
   const router = useRouter();
 
   return (
@@ -65,5 +63,3 @@ function Navbar({ title, goBack }: { title: string, goBack: boolean }) {
     </nav>
   )
 }
-
-export default Navbar;
