@@ -1,5 +1,5 @@
-import Product from "./product";
 import { ProductType } from "@/types/ProductType";
+import Product from "./product";
 
 type ProductListProps = {
     products: ProductType[];
