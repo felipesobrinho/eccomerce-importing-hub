@@ -9,25 +9,34 @@ import {
 import { ContentLayout } from "../components/ContentLayout";
 import ProductsList from "../components/ProductsList";
 import fetchProducts from "../actions";
+import SearchInput from "../components/SearchInput";
 
-export default async function Loja() {
-  const products = await fetchProducts();
-  
+export default async function Loja({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+  };
+}) {
+  const query = searchParams?.query || '';
+  const products = await fetchProducts(query);
+
   return (
     <ContentLayout title="Home" goBack={true}>
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">General</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Loja</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">General</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>Loja</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
 
-      <ProductsList products={products}/>    
+      <SearchInput />
+      <ProductsList products={products} />
     </ContentLayout>
   );
 }
